@@ -1,0 +1,106 @@
+name: Observe ECB and publish
+
+on:
+  workflow_dispatch:
+    inputs:
+      force:
+        description: Fetch the actual provider now (respecting the 60-second gate)
+        type: boolean
+        default: true
+  schedule:
+    - cron: '17,47 * * * *'
+  push:
+    branches: [main]
+    paths: [source.zip, site.zip, cloud-release.json, .github/workflows/observe.yml]
+
+# No pull-request code or third-party caller can trigger this workflow.
+permissions: {}
+concurrency:
+  group: reference-fx-observer
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    outputs:
+      deploy: ${{ steps.persist.outputs.deploy }}
+    steps:
+      - name: Checkout this repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: main
+      - name: Node runtime
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '24'
+      - name: Verify release and unpack
+        run: |
+          python3 - <<'PY'
+          import hashlib,json,pathlib,stat,zipfile
+          manifest=json.loads(pathlib.Path('cloud-release.json').read_text())
+          for name,target in [('source.zip','app'),('site.zip','site')]:
+              content=pathlib.Path(name).read_bytes()
+              assert hashlib.sha256(content).hexdigest()==manifest[name]['sha256'],'release hash mismatch'
+              with zipfile.ZipFile(name) as archive:
+                  assert sum(i.file_size for i in archive.infolist())<30000000,'release too large'
+                  for item in archive.infolist():
+                      path=pathlib.PurePosixPath(item.filename)
+                      assert not path.is_absolute() and '..' not in path.parts and '\\' not in item.filename,'unsafe path'
+                      assert not stat.S_ISLNK(item.external_attr>>16),'symlink rejected'
+                  archive.extractall(target)
+          PY
+      - name: Collect and learn from actual ECB responses
+        working-directory: app
+        env:
+          BOARD_STATE: ${{ github.workspace }}/records-state.json
+          BOARD_OUTPUT: ${{ github.workspace }}/site
+          FORCE_OBSERVATION: ${{ github.event_name == 'workflow_dispatch' && inputs.force && '1' || '0' }}
+        run: node cloud-capture.mjs
+      - name: Verify data and regression checks
+        working-directory: app
+        run: |
+          mkdir -p data
+          cp ../site/board.json data/actual-board.json
+          node --test tests/*.test.mjs
+      - name: Persist verified actual records
+        id: persist
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          if git diff --quiet -- records-state.json; then
+            if [ "$EVENT_NAME" = "schedule" ]; then
+              echo 'deploy=false' >> "$GITHUB_OUTPUT"
+            else
+              echo 'deploy=true' >> "$GITHUB_OUTPUT"
+            fi
+          else
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add records-state.json
+            git commit -m 'Record verified ECB observation and learning state'
+            git push origin HEAD:main
+            echo 'deploy=true' >> "$GITHUB_OUTPUT"
+          fi
+      - name: Upload public website
+        if: steps.persist.outputs.deploy == 'true'
+        uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4
+        with:
+          path: site
+  deploy:
+    needs: collect
+    if: needs.collect.outputs.deploy == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish public snapshot
+        id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
