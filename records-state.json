@@ -1,27 +1,27 @@
 {
   "version": 1,
-  "exported_at": "2026-10-06T00:42:31.457Z",
+  "exported_at": "2026-10-06T01:35:37.717Z",
   "tables": {
     "readings": [
       {
         "signal_id": "ecb-usd-krw",
         "record_date": "2026-10-06",
         "first_fetched_at": "2026-10-05T21:25:40.468Z",
-        "last_fetched_at": "2026-10-06T00:42:31.454Z",
-        "payload": "{\"reading\":{\"signal_id\":\"ecb-usd-krw\",\"normalized_value\":1343.9843,\"unit\":\"KRW / USD\",\"source_name\":\"European Central Bank · 교차환율 계산\",\"source_url\":\"https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml\",\"source_time\":null,\"fetched_at\":\"2026-10-06T00:42:31.454Z\",\"record_timezone\":\"Asia/Seoul\",\"record_date\":\"2026-10-06\"},\"source_date\":\"2026-10-05\",\"source_observed_at\":\"2026-10-05\",\"source_time_precision\":\"date\",\"published_at\":\"2026-10-05T13:56:17.000Z\",\"eur_usd\":\"1.1204\",\"eur_krw\":\"1505.80\",\"raw\":\"<?xml version=\\\"1.0\\\" encoding=\\\"UTF-8\\\"?>\\n<gesmes:Envelope xmlns:gesmes=\\\"http://www.gesmes.org/xml/2002-08-01\\\" xmlns=\\\"http://www.ecb.int/vocabulary/2002-08-01/eurofxref\\\">\\n\\t<gesmes:subject>Reference rates</gesmes:subject>\\n\\t<gesmes:Sender>\\n\\t\\t<gesmes:name>European Central Bank</gesmes:name>\\n\\t</gesmes:Sender>\\n\\t<Cube>\\n\\t\\t<Cube time='2026-10-05'>\\n\\t\\t\\t<Cube currency='USD' rate='1.1204'/>\\n\\t\\t\\t<Cube currency='JPY' rate='177.28'/>\\n\\t\\t\\t<Cube currency='CZK' rate='24.456'/>\\n\\t\\t\\t<Cube currency='DKK' rate='7.4745'/>\\n\\t\\t\\t<Cube currency='GBP' rate='0.84720'/>\\n\\t\\t\\t<Cube currency='HUF' rate='367.80'/>\\n\\t\\t\\t<Cube currency='PLN' rate='4.3795'/>\\n\\t\\t\\t<Cube currency='RON' rate='5.3363'/>\\n\\t\\t\\t<Cube currency='SEK' rate='11.2525'/>\\n\\t\\t\\t<Cube currency='CHF' rate='0.9311'/>\\n\\t\\t\\t<Cube currency='ISK' rate='137.00'/>\\n\\t\\t\\t<Cube currency='NOK' rate='10.7575'/>\\n\\t\\t\\t<Cube currency='TRY' rate='55.0755'/>\\n\\t\\t\\t<Cube currency='AUD' rate='1.6097'/>\\n\\t\\t\\t<Cube currency='BRL' rate='5.5849'/>\\n\\t\\t\\t<Cube currency='CAD' rate='1.5969'/>\\n\\t\\t\\t<Cube currency='CNY' rate='7.5118'/>\\n\\t\\t\\t<Cube currency='HKD' rate='8.7925'/>\\n\\t\\t\\t<Cube currency='IDR' rate='20069.89'/>\\n\\t\\t\\t<Cube currency='ILS' rate='3.4310'/>\\n\\t\\t\\t<Cube currency='INR' rate='107.8915'/>\\n\\t\\t\\t<Cube currency='KRW' rate='1505.80'/>\\n\\t\\t\\t<Cube currency='MXN' rate='20.3348'/>\\n\\t\\t\\t<Cube currency='MYR' rate='4.5791'/>\\n\\t\\t\\t<Cube currency='NZD' rate='2.0038'/>\\n\\t\\t\\t<Cube currency='PHP' rate='70.219'/>\\n\\t\\t\\t<Cube currency='SGD' rate='1.4344'/>\\n\\t\\t\\t<Cube currency='THB' rate='37.752'/>\\n\\t\\t\\t<Cube currency='ZAR' rate='18.6263'/>\\n\\t\\t</Cube>\\n\\t</Cube>\\n</gesmes:Envelope>\",\"raw_sha256\":\"8ba05b7b0c3afdac3dad7ac653a459df998383b7971386d630984aeb3872c424\",\"calculation\":\"round4(EUR/KRW ÷ EUR/USD)\"}"
+        "last_fetched_at": "2026-10-06T01:35:37.712Z",
+        "payload": "{\"reading\":{\"signal_id\":\"ecb-usd-krw\",\"normalized_value\":1343.9843,\"unit\":\"KRW / USD\",\"source_name\":\"European Central Bank · 교차환율 계산\",\"source_url\":\"https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml\",\"source_time\":null,\"fetched_at\":\"2026-10-06T01:35:37.712Z\",\"record_timezone\":\"Asia/Seoul\",\"record_date\":\"2026-10-06\"},\"source_date\":\"2026-10-05\",\"source_observed_at\":\"2026-10-05\",\"source_time_precision\":\"date\",\"published_at\":\"2026-10-05T13:56:38.000Z\",\"eur_usd\":\"1.1204\",\"eur_krw\":\"1505.80\",\"raw\":\"<?xml version=\\\"1.0\\\" encoding=\\\"UTF-8\\\"?>\\n<gesmes:Envelope xmlns:gesmes=\\\"http://www.gesmes.org/xml/2002-08-01\\\" xmlns=\\\"http://www.ecb.int/vocabulary/2002-08-01/eurofxref\\\">\\n\\t<gesmes:subject>Reference rates</gesmes:subject>\\n\\t<gesmes:Sender>\\n\\t\\t<gesmes:name>European Central Bank</gesmes:name>\\n\\t</gesmes:Sender>\\n\\t<Cube>\\n\\t\\t<Cube time='2026-10-05'>\\n\\t\\t\\t<Cube currency='USD' rate='1.1204'/>\\n\\t\\t\\t<Cube currency='JPY' rate='177.28'/>\\n\\t\\t\\t<Cube currency='CZK' rate='24.456'/>\\n\\t\\t\\t<Cube currency='DKK' rate='7.4745'/>\\n\\t\\t\\t<Cube currency='GBP' rate='0.84720'/>\\n\\t\\t\\t<Cube currency='HUF' rate='367.80'/>\\n\\t\\t\\t<Cube currency='PLN' rate='4.3795'/>\\n\\t\\t\\t<Cube currency='RON' rate='5.3363'/>\\n\\t\\t\\t<Cube currency='SEK' rate='11.2525'/>\\n\\t\\t\\t<Cube currency='CHF' rate='0.9311'/>\\n\\t\\t\\t<Cube currency='ISK' rate='137.00'/>\\n\\t\\t\\t<Cube currency='NOK' rate='10.7575'/>\\n\\t\\t\\t<Cube currency='TRY' rate='55.0755'/>\\n\\t\\t\\t<Cube currency='AUD' rate='1.6097'/>\\n\\t\\t\\t<Cube currency='BRL' rate='5.5849'/>\\n\\t\\t\\t<Cube currency='CAD' rate='1.5969'/>\\n\\t\\t\\t<Cube currency='CNY' rate='7.5118'/>\\n\\t\\t\\t<Cube currency='HKD' rate='8.7925'/>\\n\\t\\t\\t<Cube currency='IDR' rate='20069.89'/>\\n\\t\\t\\t<Cube currency='ILS' rate='3.4310'/>\\n\\t\\t\\t<Cube currency='INR' rate='107.8915'/>\\n\\t\\t\\t<Cube currency='KRW' rate='1505.80'/>\\n\\t\\t\\t<Cube currency='MXN' rate='20.3348'/>\\n\\t\\t\\t<Cube currency='MYR' rate='4.5791'/>\\n\\t\\t\\t<Cube currency='NZD' rate='2.0038'/>\\n\\t\\t\\t<Cube currency='PHP' rate='70.219'/>\\n\\t\\t\\t<Cube currency='SGD' rate='1.4344'/>\\n\\t\\t\\t<Cube currency='THB' rate='37.752'/>\\n\\t\\t\\t<Cube currency='ZAR' rate='18.6263'/>\\n\\t\\t</Cube>\\n\\t</Cube>\\n</gesmes:Envelope>\",\"raw_sha256\":\"8ba05b7b0c3afdac3dad7ac653a459df998383b7971386d630984aeb3872c424\",\"calculation\":\"round4(EUR/KRW ÷ EUR/USD)\"}"
       }
     ],
     "feed_status": [
       {
         "id": 1,
         "code": "none",
-        "checked_at": "2026-10-06T00:42:31.454Z"
+        "checked_at": "2026-10-06T01:35:37.712Z"
       }
     ],
     "request_gate": [
       {
         "id": 1,
-        "allowed_at": 1791247410505
+        "allowed_at": 1791250596705
       }
     ],
     "automation_state": [
@@ -35,7 +35,7 @@
       },
       {
         "id": "monitor",
-        "payload": "{\"enabled\":true,\"next_attempt\":\"2026-10-06T04:42:30.505Z\",\"last_attempt\":\"2026-10-06T00:42:30.505Z\",\"result\":\"none\",\"attempts\":4,\"events\":[{\"at\":\"2026-10-05T22:25:18.194Z\",\"result\":\"cached\",\"learning_error\":null,\"history_error\":null,\"kind\":\"manual\"},{\"at\":\"2026-10-05T22:38:37.931Z\",\"result\":\"cached\",\"learning_error\":null,\"history_error\":null,\"kind\":\"manual\"},{\"at\":\"2026-10-05T22:53:17.465Z\",\"result\":\"cached\",\"learning_error\":null,\"history_error\":null,\"kind\":\"manual\"},{\"at\":\"2026-10-06T00:42:30.505Z\",\"result\":\"none\",\"learning_error\":null,\"history_error\":null,\"kind\":\"manual\"}],\"learning_error\":null,\"history_error\":null}"
+        "payload": "{\"enabled\":true,\"next_attempt\":\"2026-10-06T05:35:36.704Z\",\"last_attempt\":\"2026-10-06T01:35:36.704Z\",\"result\":\"none\",\"attempts\":5,\"events\":[{\"at\":\"2026-10-05T22:25:18.194Z\",\"result\":\"cached\",\"learning_error\":null,\"history_error\":null,\"kind\":\"manual\"},{\"at\":\"2026-10-05T22:38:37.931Z\",\"result\":\"cached\",\"learning_error\":null,\"history_error\":null,\"kind\":\"manual\"},{\"at\":\"2026-10-05T22:53:17.465Z\",\"result\":\"cached\",\"learning_error\":null,\"history_error\":null,\"kind\":\"manual\"},{\"at\":\"2026-10-06T00:42:30.505Z\",\"result\":\"none\",\"learning_error\":null,\"history_error\":null,\"kind\":\"manual\"},{\"at\":\"2026-10-06T01:35:36.704Z\",\"result\":\"none\",\"learning_error\":null,\"history_error\":null,\"kind\":\"manual\"}],\"learning_error\":null,\"history_error\":null}"
       }
     ]
   }
