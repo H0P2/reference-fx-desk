@@ -1,8 +1,13 @@
 [
   {
+    "path": ".github/workflows/observe.yml",
+    "sha256": "838b63369fe6397f0bcbd1524315873bad2ada9538f3746fb91d001ab8dfd023",
+    "bytes": 3975
+  },
+  {
     "path": ".gitignore",
-    "sha256": "20cc094e8373f93dc69601c6db160d0363da5abf3b5278df0fe26e0b4630cd1f",
-    "bytes": 635
+    "sha256": "51acac398cb867bc74d0c3178ef8a91c3f97dbdb3052c3fcec7fc4249c35875f",
+    "bytes": 643
   },
   {
     "path": ".npmrc",
@@ -46,8 +51,8 @@
   },
   {
     "path": "app/page.jsx",
-    "sha256": "a2b48afb58d99ff96a8806e77eb469e680c6fe86462e4244c9436b04005ccabd",
-    "bytes": 17101
+    "sha256": "c5a6bdb93f7c2a78dc9168a2efe9e0c95927844a4dbe14cf3a986c01033b27f4",
+    "bytes": 19361
   },
   {
     "path": "build/connector-preview-plugin.mjs",
@@ -80,6 +85,11 @@
     "bytes": 1343
   },
   {
+    "path": "build-static.mjs",
+    "sha256": "e365bf0979fc515f648066310cfe89d93a5edaa4833ec6f917daf24917474e6a",
+    "bytes": 2140
+  },
+  {
     "path": "capture-once.mjs",
     "sha256": "3242d22d46b48ed27dc8f090a452350753ba3846a5bdca303312f435f621ba47",
     "bytes": 117
@@ -88,6 +98,11 @@
     "path": "client.jsx",
     "sha256": "cd9752d8752f50a129d0ab24596f8c75e4160d38d81f3deb3cb11adfde0cf4c7",
     "bytes": 168
+  },
+  {
+    "path": "cloud-capture.mjs",
+    "sha256": "2190183754ba4f5ba4f0c7abfc42511877357ac699ed01ef80040ab179c54a58",
+    "bytes": 2239
   },
   {
     "path": "cloudflare-env.d.ts",
@@ -470,6 +485,11 @@
     "bytes": 565
   },
   {
+    "path": "lib/cloud-snapshot.mjs",
+    "sha256": "621ee334cc1f2abf29d7bf5b53cf3574fd612364fab2f882c0894b351131bfc9",
+    "bytes": 832
+  },
+  {
     "path": "lib/connector-context.ts",
     "sha256": "bbddff68689cb0f6926fecd4b8b96f12f2054277c296e97b0df07d4ad5ece24e",
     "bytes": 612
@@ -500,6 +520,11 @@
     "bytes": 1887
   },
   {
+    "path": "lib/durable-store.mjs",
+    "sha256": "1e17a1cbfdfe54754716f8dd2b56b9784740fcdc56b5ce2dbd3976ac7e2b6bd1",
+    "bytes": 3776
+  },
+  {
     "path": "lib/ecb.mjs",
     "sha256": "b0c4e1fcbb8116e3035870d78fc260eb9c818e99065075875803be82132dd89e",
     "bytes": 3422
@@ -511,8 +536,8 @@
   },
   {
     "path": "lib/monitor.mjs",
-    "sha256": "b7bc612e468411e52891179c8e7b2a986434ba7c6eed789b547638e2d47b3e67",
-    "bytes": 5569
+    "sha256": "7b60a3384c823483ebad4f91c84964b2479d26bcc8df2b3da1e67ee26d154ff7",
+    "bytes": 5587
   },
   {
     "path": "lib/replay.mjs",
@@ -521,8 +546,8 @@
   },
   {
     "path": "lib/service.mjs",
-    "sha256": "4ce74bf2c306b96987c16cb5bc09bd6dbc6232a52c784c2c81aa8313cfc2c418",
-    "bytes": 902
+    "sha256": "6d5643d7cbc91a8a480d7384b8d559589e2e298a4b657c81f5773cbfb685bba4",
+    "bytes": 922
   },
   {
     "path": "lib/utils.ts",
@@ -686,13 +711,13 @@
   },
   {
     "path": "README.md",
-    "sha256": "47bb780d782d7caa21c50808817b893fd361f5b22af72d6bc8875a8ae579a96d",
-    "bytes": 7766
+    "sha256": "bfaf856a9511e473535e9436a93be121ae1d1eab00d107cbfe85e34eabcd6f8d",
+    "bytes": 11263
   },
   {
     "path": "release-source.mjs",
-    "sha256": "9b2c11c203756c50e9662f6e99026e7191fe71fd26db374168a1d54b3c1d6676",
-    "bytes": 1588
+    "sha256": "5c658478ebdce840a07b1b649cfa757b8c70255b42478e792c1bb8e5c28338ef",
+    "bytes": 1596
   },
   {
     "path": "scripts/build-verified.sh",
@@ -780,9 +805,19 @@
     "bytes": 2529
   },
   {
+    "path": "tests/cloud-snapshot.test.mjs",
+    "sha256": "bad27dca91541d7ae85b3aea8066cb6996198da42f25c28d587068cf8c378cd1",
+    "bytes": 1468
+  },
+  {
     "path": "tests/contract.test.mjs",
     "sha256": "e5718b0fcd1d1c1233757084f485ec959c8c7b3294c8c4a81f066120da6eaba4",
     "bytes": 2465
+  },
+  {
+    "path": "tests/durable-store.test.mjs",
+    "sha256": "541671237e26f2b0a4844739a7a4d323aa3f0092fc4710768066c9afd705127a",
+    "bytes": 2100
   },
   {
     "path": "tests/ecb.test.mjs",
@@ -801,8 +836,8 @@
   },
   {
     "path": "tests/service.test.mjs",
-    "sha256": "a976c7a8e68a061a2d1360359991dbc1fec5d1282e994de9bf88f900f1ba4842",
-    "bytes": 3145
+    "sha256": "5ef9d72ae36f98e82827ecf64d677cea7776695eaccc5ffb7a28ad4ca7894ac4",
+    "bytes": 3565
   },
   {
     "path": "tsconfig.json",
