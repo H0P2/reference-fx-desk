@@ -51,8 +51,8 @@
   },
   {
     "path": "app/page.jsx",
-    "sha256": "c5a6bdb93f7c2a78dc9168a2efe9e0c95927844a4dbe14cf3a986c01033b27f4",
-    "bytes": 19361
+    "sha256": "0dfbce3f61a0486d9611401919176fffde2bfe3efcb03016b1a31f76fcd86f0a",
+    "bytes": 19810
   },
   {
     "path": "build/connector-preview-plugin.mjs",
@@ -701,8 +701,8 @@
   },
   {
     "path": "public/source.html",
-    "sha256": "f5f7e878e3288f0aae603d9a08251fb9f15cd5c019aefae714f6de8820005350",
-    "bytes": 3130
+    "sha256": "26fda589dd4e88bc4dc94ebd677391fb84c2a9b6c517a36365d4e68de70b8283",
+    "bytes": 3220
   },
   {
     "path": "public/window.svg",
@@ -711,8 +711,8 @@
   },
   {
     "path": "README.md",
-    "sha256": "bfaf856a9511e473535e9436a93be121ae1d1eab00d107cbfe85e34eabcd6f8d",
-    "bytes": 11263
+    "sha256": "3ee898a4818d34ee019ab53f190483f21e850239670e9244f13702a104ab50c3",
+    "bytes": 13534
   },
   {
     "path": "release-source.mjs",
